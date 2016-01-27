@@ -285,6 +285,7 @@ span.info-name{
     float: left;
     text-align: center;
     & a{
+      color: black;
       &:hover{
         text-decoration: none;
       }
