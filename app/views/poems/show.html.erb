@@ -4,6 +4,10 @@
 		<span class="poem-item-title">
 			<%= @poem.name%>
 		</span>
+		<span class="poem-item-id">
+			<%= link_to @poem.id.to_s.rjust(2, '0'), poems_path %>	
+		</span>
+		
 		<div class="poem-item-text">
 		<%= raw @poem.text%>
 		</div>

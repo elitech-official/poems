@@ -1,13 +1,11 @@
 <div class="poems-index no-padding no-margin col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<div class="poems-title">
-		
-		<a href="<%= root_path%>">
-			<%= image_tag 'logo.jpg'%>
-		</a>
-	<span> СТИХИ</span>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat iaculis massa, id lacinia urna tempor vitae. Cras rhoncus luctus elit ut tincidunt.
 	</p>
+	</div>
+	<div class="poems-title-header">
+		<%= link_to "Стихи", root_path%>
 	</div>
 	<div class=" poems-list no-padding no-margin col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<% @poems.each do |poem|%>

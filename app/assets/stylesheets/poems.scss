@@ -55,13 +55,19 @@ body{
   margin-bottom: 100px;
   & a{
       & img{
-        width: 100%;
-        height: 100%;
+        width: 99%;
+        height: 99%;
       }
     }
 }
 
+.info-name.right{
+  width: 100%!important;
+  text-align: right!important;
+  display: block;
+}
 span.info-name{
+  display: block;
   & a{
     color: black!important;
     text-decoration: none;
@@ -165,7 +171,7 @@ span.info-name{
   margin-top: 250px!important;
   border-top: 1px solid black;
   max-height: 500px!important;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .poems-title{
@@ -194,6 +200,25 @@ span.info-name{
     display: block;
     margin-top: 20px;
     font-size: 16px;
+  }
+}
+
+.poems-title-header{
+  position: absolute;
+  top:25px;
+  width: 100px;
+  height: 40px;
+  font-size: 48px;
+  color: black;
+  left: calc(50% - 50px);
+  &:hover > a{
+    text-decoration: none;
+  }
+  & a{
+    color: black;
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
 .poem-item{
@@ -260,8 +285,19 @@ span.info-name{
 
 //----------------------- POEM SHOW -----------------------//
 
+.poem-item-id{
+  font-size: 24px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: underline;
+  & a{
+    color: black;
+  }
+}
+
 .poem-show-skew{
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100vh;
   -ms-transform: skewX(-6deg); 
   -webkit-transform: skewX(-6deg);
