@@ -15,26 +15,26 @@ ActiveAdmin.register Cycle do
   controller do
     
     def show
-      @Cycle = Cycle.friendly.find(params[:id])
+      @cycle = Cycle.friendly.find(params[:id])
     end
     
     def edit
-      @Cycle = Cycle.friendly.find(params[:id])
+      @cycle = Cycle.friendly.find(params[:id])
     end
     
     def update
-      @Cycle = Cycle.friendly.find(params[:id])
+      @cycle = Cycle.friendly.find(params[:id])
       super
     end
     
     def destroy
-      @Cycle = Cycle.friendly.find(params[:id])
+      @cycle = Cycle.friendly.find(params[:id])
       super
     end
     
     private
     def Cycle_params
-      params.require(:Cycle).permit(:name, :slug)
+      params.require(:cycle).permit(:name, :slug)
     end
   end
   
