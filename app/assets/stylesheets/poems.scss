@@ -50,7 +50,7 @@ body{
   width: 200px;
   height: 200px;
   text-align: center;
-  margin: 100px auto;
+  margin: 0 auto;
   border: 6px solid #000;
   margin-bottom: 100px;
   & a{
@@ -110,7 +110,7 @@ span.info-name{
 #header{
   background-color: #FFF;
   & .separator-horizontal{
-    margin: 0 auto;
+    margin: 50px auto;
     width: 10%;
     min-width: 50px;
     border-bottom: 3px solid black;
@@ -201,7 +201,7 @@ span.info-name{
     width: 300px;
     height: 300px;
     margin: 0 auto;
-    border: 4px solid black;
+    border: 3px solid black;
     & table{
       width: 100%;
       height: 100%;
@@ -212,7 +212,7 @@ span.info-name{
       & .poem-read-more{
         height: 20%;
         & td{
-                border-top: 4px solid black;
+                border-top: 3px solid black;
                 & a{
                   color: black;
                   &:hover{
@@ -258,7 +258,7 @@ span.info-name{
 //----------------------- POEM SHOW -----------------------//
 
 .poem-show-skew{
-  height: 100%;
+  height: 100vh;
   -ms-transform: skewX(-6deg); 
   -webkit-transform: skewX(-6deg);
   transform: skewX(-6deg);
@@ -308,8 +308,8 @@ span.info-name{
   & .left-stripe, .right-stripe{
     width: 15px;
     height: 100vh;
-    border-right: 5px solid black;
-    border-left: 5px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
   }
   & .left-stripe{
     position: absolute;
@@ -356,7 +356,6 @@ span.info-name{
 .write-message{
   width: 300px;
   height: 80px;
-  border-radius:10px;
   border: 3px solid black;
   margin: 20px auto;
   &:hover{
@@ -433,7 +432,7 @@ span.info-name{
   position: absolute;
   top: -250px;
   height: 500px;
-  border: 5px solid black;
+  border: 3px solid black;
   z-index: -1;
 }
 
@@ -452,7 +451,7 @@ span.info-name{
   position: absolute;
   bottom: -400px;
   height: 500px;
-  border: 5px solid black;
+  border: 3px solid black;
   z-index: -1;
 }
 
@@ -510,8 +509,7 @@ span.info-name{
   margin: 70px auto;
   padding: 20px;
   background: #fff;
-  border-radius: 5px;
-  width: 30%;
+  width: 60%;
   position: relative;
   transition: all 5s ease-in-out;
 }
@@ -572,9 +570,8 @@ text-align: left;
 
 .contact-deliver{
   height: auto;
-  width: 25%;
+  width: 60%;
   min-width: 300px;
-  border-radius: 20px;
   margin: 150px auto;
   & .flash-msg{
     text-align: center;
@@ -606,6 +603,7 @@ text-align: left;
   .about-me-info{
     & .about-title{
       font-size: 24px;
+      margin-top: 15px;
     }
     & .about-text{
       font-size: 16px;
@@ -615,6 +613,12 @@ text-align: left;
   .info-item > span{
     font-size: 18px;
   }
+  .skew-over{
+    & .skew-bottom{
+      bottom: -420px;
+    }
+  }
+  
 }
 
 
