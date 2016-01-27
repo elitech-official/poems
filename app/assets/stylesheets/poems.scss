@@ -258,6 +258,7 @@ span.info-name{
 //----------------------- POEM SHOW -----------------------//
 
 .poem-show-skew{
+  overflow-y: scroll;
   height: 100vh;
   -ms-transform: skewX(-6deg); 
   -webkit-transform: skewX(-6deg);
