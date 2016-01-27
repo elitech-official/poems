@@ -1,0 +1,28 @@
+<div class="poems-index no-padding no-margin col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="poems-title">
+		
+		<a href="<%= root_path%>">
+			<%= image_tag 'logo.jpg'%>
+		</a>
+	<span> СТИХИ</span>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat iaculis massa, id lacinia urna tempor vitae. Cras rhoncus luctus elit ut tincidunt.
+	</p>
+	</div>
+	<div class=" poems-list no-padding no-margin col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<% @poems.each do |poem|%>
+		
+		<div class="poem-item col-xs-6 col-sm-6 col-md-4 col-lg-4">
+			<div class="inner-poem">
+				<table>
+					<tr class="poem-name-row">
+			<td><span class="poem-name"> <%= poem.name%> </span>
+			</td></tr>
+			<tr class="poem-read-more"> <td><%= link_to "Читать дальше ->", poem_path(id: poem.slug)%> </td></tr>
+			</table>
+			<span class="number"> <%= poem.id%> </span>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	</div>

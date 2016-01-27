@@ -1,0 +1,58 @@
+<div class="contacts-overlay col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="separator-horizontal"> </div>
+	<div class="about-rectangle">
+		<a href="<%= root_path %>">
+			<%= image_tag 'logo.jpg'%>
+		</a>
+	</div>
+	<div class="about-info col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+		<div class="info-item col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<span class="number"> 01 </span>
+			<span class="info-name"> ИМЯ: ПАША </span>
+		</div>
+		<div class="info-item col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<span class="number"> 03 </span>
+			<span class="info-name"> ЭЛ. АДРЕС: <a href="mailto:mrzff@ya.ru"> mrzff@ya.ru </a>  </span>
+		</div>
+		<div class="info-item col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<span class="number"> 02 </span>
+			<span class="info-name"> ФАМИЛИЯ: НИКУЛИН </span>
+		</div>
+		<div class="info-item col-xs-6 col-sm-6 col-md-6 col-lg-6">
+			<span class="number"> 04 </span>
+			<span class="info-name"> ТЕЛЕФОН: +7 999 815 7845</span>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="write-message">
+		<a class="button" href="#popup1">НАПИСАТЬ СООБЩЕНИЕ </a>
+	</div>
+	</div>
+</div>
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<div align="center">
+  <h3>Отправить сообщение</h3>
+
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <%= f.input :name, :required => true, label: false, placeholder: "Ваше имя" %>
+    <%= f.input :email, :required => true, label: false, placeholder: "Электонная почта"%>
+    <%= f.input :message, :as => :text, :required => true, label: false, placeholder: "Текст сообщения" %>
+    <div class= "hidden">
+      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+    </div>
+    <div>
+      </br>
+      <div class="write-message">
+      <%= f.button :submit, 'Отправить'%>
+      </div>
+    </div>
+  <% end %>
+</div>
+		</div>
+	</div>
+</div>

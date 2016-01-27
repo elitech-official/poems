@@ -1,0 +1,18 @@
+<div class="poem-show-overlay col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="poem-show-skew">
+	<div class="poem-show-body col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-2 col-lg-offset-3">
+		<span class="poem-item-title">
+			<%= @poem.name%>
+		</span>
+		<div class="poem-item-text">
+		<%= raw @poem.text%>
+		</div>
+		<span class="poem-item-cycle">
+			Из цикла <%=link_to @poem.cycle.name, poems_path(cycle: @poem.cycle.id)%>
+		</span>
+		<span class="poem-item-published">
+			<%= @poem.created_at.strftime("%d.%m.%Y")%>
+		</span>
+	</div>
+	</div>
+</div>
